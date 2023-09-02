@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <h1>CALCULATOR</h1>
+    <div class="container">
+        <form>
+            <div class="calculator">
+                <div class="display">
+                    <input type="text" name="display" class="display" id="user_inputs">
+                </div>
+                <div class="buttons" id="buttons">
+                    <div class="div">
+                        <input type="button" value="C" onclick="document.getElementById('user_inputs').value = ''">
+                        <input type="button" value="X" onclick="document.getElementById('user_inputs').value = document.getElementById('user_inputs').value.slice(0, -1)">
+                        <input type="button" class="divison" value="/" onclick="document.getElementById('user_inputs').value += '/'">
+                    </div>
+                    <div class="div">
+                        <input type="button" value="7" onclick="document.getElementById('user_inputs').value += '7'">
+                        <input type="button" value="8" onclick="document.getElementById('user_inputs').value += '8'">
+                        <input type="button" value="9" onclick="document.getElementById('user_inputs').value += '9'">
+                        <input type="button" value="*" onclick="document.getElementById('user_inputs').value += '*'">
+                    </div>
+                    <div class="div">
+                        <input type="button" value="4" onclick="document.getElementById('user_inputs').value += '4'">
+                        <input type="button" value="5" onclick="document.getElementById('user_inputs').value += '5'">
+                        <input type="button" value="6" onclick="document.getElementById('user_inputs').value += '6'">
+                        <input type="button" value="-" onclick="document.getElementById('user_inputs').value += '-'">
+                    </div>
+                    <div class="div">
+                        <input type="button" value="1" onclick="document.getElementById('user_inputs').value += '1'">
+                        <input type="button" value="2" onclick="document.getElementById('user_inputs').value += '2'">
+                        <input type="button" value="3" onclick="document.getElementById('user_inputs').value += '3'">
+                        <input type="button" value="+" onclick="document.getElementById('user_inputs').value += '+'">
+                    </div>
+                    <div class="div">
+                        <input type="button" value="0" onclick="document.getElementById('user_inputs').value += '0'">
+                        <input type="button" value="00" onclick="document.getElementById('user_inputs').value += '00'">
+                        <input type="button" value="." onclick="document.getElementById('user_inputs').value += '.'">
+                        <input type="button" value="=" onclick="document.getElementById('user_inputs').value = eval(document.getElementById('user_inputs').value)">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
